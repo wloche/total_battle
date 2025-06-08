@@ -1,0 +1,92 @@
+classDiagram
+    class Architect_Blueprints_Tier1 {
+	    LEVEL_10=60
+	    LEVEL_15=500
+	    LEVEL_20=1950
+    }
+
+    class Architect_Blueprints_Tier2 {
+	    LEVEL_10=40
+	    LEVEL_15=600
+	    LEVEL_20=1300
+    }
+
+    class Architect_Blueprints_Tier3 {
+	    LEVEL_10=20
+	    LEVEL_15=150
+	    LEVEL_20=650
+    }
+
+    class Academy {
+    }
+
+    class Baracks {
+    }
+
+    class Caravan {
+    }
+
+    class Warehouse {
+    }
+
+    class Farmers_House {
+    }
+
+    class Temple {
+    }
+
+    class Mansion {
+    }
+
+    class Tar_Workshop {
+    }
+
+    class Portal_Master {
+    }
+
+    class Consulate {
+    }
+
+    class Forge {
+    }
+
+    class Lumberjack_House {
+    }
+
+    class Stonecutter_House {
+    }
+
+    class Foundry {
+    }
+
+    class Capitol {
+    }
+
+	<<interface>> Architect_Blueprints_Tier1
+	<<interface>> Architect_Blueprints_Tier2
+	<<interface>> Architect_Blueprints_Tier3
+
+    Academy <.. Baracks
+    Academy <.. Caravan
+    Warehouse <.. Farmers_House
+    Baracks <.. Temple
+    Temple <.. Mansion
+    Caravan <.. Warehouse
+    Tar_Workshop <.. Capitol
+    Mansion <.. Capitol
+    Forge <.. Tar_Workshop
+    Portal_Master <.. Capitol
+    Consulate <.. Capitol
+
+	class Architect_Blueprints_Tier1:::Tier1
+	class Architect_Blueprints_Tier2:::Tier2
+	class Architect_Blueprints_Tier3:::Tier3
+	class Academy:::Tier2
+	class Consulate:::Tier2
+	class Capitol:::Tier1
+
+	classDef Tier1 :, stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+	classDef Tier2 :, stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
+	classDef Tier3 :,stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+
+
